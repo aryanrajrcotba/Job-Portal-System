@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | JobConnect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Create Your Account</h2>
+                <p>Join our community today</p>
+            </div>
+            <form method="post" class="auth-form">
+                <div class="form-group">
+                    <input name="first_name" placeholder="First Name" required>
+                </div>
+                <div class="form-group">
+                    <input name="middle_name" placeholder="Middle Name (Optional)">
+                </div>
+                <div class="form-group">
+                    <input name="last_name" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Create Password" required>
+                </div>
+                <div class="form-group">
+                    <select name="user_type" required>
+                        <option value="" disabled selected>Select Account Type</option>
+                        <option value="job_seeker">Job Seeker</option>
+                        <option value="employer">Employer</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form>
+            <div class="auth-footer">
+                Already have an account? <a href="/login">Sign In</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
